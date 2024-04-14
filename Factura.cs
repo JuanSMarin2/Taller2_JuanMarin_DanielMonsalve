@@ -36,7 +36,7 @@ namespace Taller_2
             Console.WriteLine($"Fecha: {DateTime.Now.ToShortDateString()}");
             Console.WriteLine($"Hora: {DateTime.Now.ToShortTimeString()}");
             Console.WriteLine($"----------------------------------");
-            Console.WriteLine($"Número de mesa: {numeroMesa}");
+            Console.WriteLine($"Número de mesa: {numeroMesa}"); //El número que identifica cada mesa para generar su respectiva factura
             Console.WriteLine($"----------------------------------");
             Console.WriteLine("Productos consumidos:");
 
