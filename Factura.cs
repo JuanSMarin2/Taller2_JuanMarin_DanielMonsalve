@@ -73,7 +73,7 @@ namespace Taller_2
 
         private void ExportarFacturaATXT(byte numeroMesa, List<Producto> productos) //La función para Exportar la factura de consola a un archivo .txt
         {
-            string path = @"D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main";
+            string path = @"D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main"; //Esta es la ruta donde queremos que se guarde el archivo .txt
             string fileName = $"Factura_Mesa_{numeroMesa}.txt";
             string fullPath = Path.Combine(path, fileName);
 
@@ -86,7 +86,7 @@ namespace Taller_2
                 sw.WriteLine("----------------------------------");
                 sw.WriteLine($"Número de mesa: {numeroMesa}");
                 sw.WriteLine("----------------------------------");
-                sw.WriteLine("Productos consumidos:");
+                sw.WriteLine("Productos consumidos: ");
 
                 foreach (var producto in productos)
                 {
