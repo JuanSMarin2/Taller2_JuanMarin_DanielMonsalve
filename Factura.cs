@@ -71,7 +71,7 @@ namespace Taller_2
         }
 
 
-        private void ExportarFacturaATXT(byte numeroMesa, List<Producto> productos)
+        private void ExportarFacturaATXT(byte numeroMesa, List<Producto> productos) //La función para Exportar la factura de consola a un archivo .txt
         {
             string path = @"D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main";
             string fileName = $"Factura_Mesa_{numeroMesa}.txt";
@@ -103,7 +103,7 @@ namespace Taller_2
             Console.WriteLine("La factura ha sido generada y exportada exitosamente");
         }
 
-        // Otras funciones relacionadas con la factura...
+        
 
     }
 }

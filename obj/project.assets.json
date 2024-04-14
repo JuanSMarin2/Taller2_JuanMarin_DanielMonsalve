@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Universidad\\POO\\Taller2_JuanMarin_DanielMonsalve-main\\Taller2_JuanMarin_DanielMonsalve-main\\Taller 2.csproj",
+      "projectUniqueName": "C:\\Users\\Daniel\\Taller2_JuanMarin_DanielMonsalve\\Taller 2.csproj",
       "projectName": "Taller 2",
-      "projectPath": "D:\\Universidad\\POO\\Taller2_JuanMarin_DanielMonsalve-main\\Taller2_JuanMarin_DanielMonsalve-main\\Taller 2.csproj",
+      "projectPath": "C:\\Users\\Daniel\\Taller2_JuanMarin_DanielMonsalve\\Taller 2.csproj",
       "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-      "outputPath": "D:\\Universidad\\POO\\Taller2_JuanMarin_DanielMonsalve-main\\Taller2_JuanMarin_DanielMonsalve-main\\obj\\",
+      "outputPath": "C:\\Users\\Daniel\\Taller2_JuanMarin_DanielMonsalve\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
