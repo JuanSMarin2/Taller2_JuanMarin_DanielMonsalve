@@ -24,7 +24,7 @@ namespace Taller_2
             }
 
             List<Producto> productosConsumidos = _productosConsumidosPorMesa[numeroMesa];
-
+             
             //ASCII 
             Console.WriteLine(@" _____ _    ____ _____ _   _ ____     _     
 |  ___/ \  / ___|_   _| | | |  _ \   / \    
