@@ -222,7 +222,7 @@
             }
             
 
-            // Verificar si la mesa ya tiene una lista de productos consumidos, si no, crear una nueva lista
+            // Verificar si la mesa ya tiene una lista de productos consumidos, si no, crea una nueva lista
             if (!productosConsumidosPorMesa.ContainsKey(mesa))
             {
                 productosConsumidosPorMesa[mesa] = new List<Producto>();
