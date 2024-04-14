@@ -59,7 +59,7 @@ namespace Taller_2
 
         }
 
-        private float CalcularTotalProductos(List<Producto> productos)
+        private float CalcularTotalProductos(List<Producto> productos) //Esta función toma el precio de cada producto y lo suma
         {
             return productos.Sum(producto => producto.Precio);
         }
