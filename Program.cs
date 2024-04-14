@@ -46,7 +46,7 @@
 
                         break;
 
-                    case "3": //Este caso muestra todas las posibles opciones para modificar la carta del restaurante así como agregar nuevos productos
+                    case "3": //Este caso muestra todas las posibles opciones para modificar la carta del restaurante así como agregar o eliminar nuevos productos, y ver la carta del restaurante
                         for (byte j = 0; j < 1;)
                         {
                             Console.WriteLine("Seleccione una opción: ");
