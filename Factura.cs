@@ -96,7 +96,7 @@ namespace Taller_2
                 sw.WriteLine($"Total Productos Consumidos: {CalcularTotalProductos(productos):C}");
                 sw.WriteLine($"IVA: {CalcularIVA(productos):C}");
                 sw.WriteLine("----------------------------------");
-                sw.WriteLine($"Total a Pagar: {CalcularIVA(productos) + CalcularTotalProductos(productos):C}");
+                sw.WriteLine($"Total a Pagar: {CalcularIVA(productos) + CalcularTotalProductos(productos):C}"); //Suma total del IVA, más el total de los productos
                 sw.WriteLine("----------------------------------");
             }
 

@@ -249,7 +249,7 @@
                     case "0":
                         return; // Salir de la función y volver al menú principal
                     default:
-                        Console.WriteLine("Opción no válida.");
+                        Console.WriteLine("Opción no válida."); //En caso tal de quel usuario envie un número incorrecto
                         break;
                 }
             }
