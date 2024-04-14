@@ -80,6 +80,7 @@
                 Console.WriteLine();
             }
 
+            //El codigo encargado de validar que si exista la mesa
             for (byte i = 0; i < 1;)
             {
                 Console.WriteLine("Seleccione una mesa entre 1 y 20 ");
