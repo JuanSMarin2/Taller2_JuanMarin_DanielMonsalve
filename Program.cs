@@ -40,7 +40,7 @@
                         Factura factura = new Factura(productosConsumidosPorMesa);
                         factura.GenerarFactura(numeroMesa);               
                         break;
-                    case "2": //Este es el caso que se encarga de ejecutar la función
+                    case "2": //Este es el caso que se encarga de ejecutar la función que agregar o elimina los productos que cada mesa consume
 
                         AgregarProductosAMesa(productosConsumidosPorMesa, productos);
 
