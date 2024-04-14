@@ -27,7 +27,7 @@
                 Console.WriteLine("  +---------------------------------------------------------------------------+");
                 string opcion = Console.ReadLine();
 
-                switch (opcion)
+                switch (opcion) //Aquí hacemos los casos posibles para la selección del menú
                 {
                     case "0": Environment.Exit(0); ; break;
                     case "1":
