@@ -30,7 +30,7 @@
                 switch (opcion) //Aquí hacemos los casos posibles para la selección del menú
                 {
                     case "0": Environment.Exit(0); ; break;
-                    case "1":
+                    case "1": //caso 1 que es el encargado de generar la factura y exportarla
                         Console.Write("Ingrese el número de mesa para generar la factura: ");           
                         while (!byte.TryParse(Console.ReadLine(), out numeroMesa) || numeroMesa < 1 || numeroMesa > 20)
                         {
