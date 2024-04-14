@@ -235,7 +235,7 @@
                 Console.WriteLine("2. Eliminar producto");
                 Console.WriteLine("0. Volver al menú principal");
                 string opcion = Console.ReadLine();
-
+                // Aquí son los casos para el apartado de agregar productos a la mesa, cada producto que la mesa ha consumido
                 switch (opcion)
                 {
                     case "1":
