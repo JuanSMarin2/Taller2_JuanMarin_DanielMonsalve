@@ -100,7 +100,7 @@ namespace Taller_2
                 sw.WriteLine("----------------------------------");
             }
 
-            Console.WriteLine("La factura ha sido generada y exportada exitosamente");
+            Console.WriteLine("La factura ha sido generada y exportada exitosamente.");
         }
 
         
