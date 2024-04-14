@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Taller_2
 {
-    internal class Producto
+    public class Producto
     {
         private string nombre;
         private int id;

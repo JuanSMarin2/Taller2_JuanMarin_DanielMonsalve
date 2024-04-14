@@ -2,11 +2,13 @@
 {
     internal class Program
     {
+        public static Dictionary<byte, List<Producto>> productosConsumidosPorMesa = new Dictionary<byte, List<Producto>>();
         static void Main(string[] args)
         {
             byte numeroMesa = 0;
             List<Producto> productos = new List<Producto>();
-
+            List<Producto> productosVenta = new List<Producto>(); // Lista para almacenar los productos seleccionados durante la venta
+            
             for (byte i = 0; i < 1;)
             {
 
@@ -18,10 +20,9 @@
                 Console.WriteLine("|____/|_|\\___|_| |_|\\_/ \\___|_| |_|_|\\__,_|\\___/(_)");
 
                 Console.WriteLine("Seleccione una opción: ");
-                Console.WriteLine("1. Realizar venta ");
-                Console.WriteLine("2. Editar productos");
-                Console.WriteLine("3. Buscar factura");
-                Console.WriteLine("4. Exportar factura");
+                Console.WriteLine("1. Generar Factura ");
+                Console.WriteLine("2. Agregar productos a mesa");
+                Console.WriteLine("3. Editar Carta/Productos");
                 Console.WriteLine("0. Salir");
                 Console.WriteLine("  +---------------------------------------------------------------------------+");
                 string opcion = Console.ReadLine();
@@ -29,8 +30,23 @@
                 switch (opcion)
                 {
                     case "0": Environment.Exit(0); ; break;
-                    case "1": i++; break;
+                    case "1":
+                        Console.Write("Ingrese el número de mesa para generar la factura: ");           
+                        while (!byte.TryParse(Console.ReadLine(), out numeroMesa) || numeroMesa < 1 || numeroMesa > 20)
+                        {
+                            Console.WriteLine("Por favor, ingrese un número de mesa válido (entre 1 y 20).");
+                            Console.Write("Ingrese el número de mesa para generar la factura: ");
+                        }
+                        Factura factura = new Factura(productosConsumidosPorMesa);
+                        factura.GenerarFactura(numeroMesa);               
+                        break;
                     case "2":
+
+                        AgregarProductosAMesa(productosConsumidosPorMesa, productos);
+
+                        break;
+
+                    case "3":
                         for (byte j = 0; j < 1;)
                         {
                             Console.WriteLine("Seleccione una opción: ");
@@ -42,8 +58,12 @@
                             string opcionProductos = Console.ReadLine();
                             switch (opcionProductos)
                             {
-                                case "0": j++; break;
-                                case "1": AgregarProductos(productos); break;
+                                case "0":
+                                    j++;
+                                    break;
+                                case "1":
+                                    AgregarProductos(productos);
+                                    break;
                                 case "2":
                                     EliminarProducto(productos);
                                     break;
@@ -54,6 +74,7 @@
                             }
                         }
                         break;
+
                     default: Console.WriteLine("Seleccione una opción valida"); break;
                 }
                 Console.WriteLine();
@@ -186,6 +207,119 @@
                 Console.WriteLine("Operación cancelada.");
             }
         }
+
+
+
+        static void AgregarProductosAMesa(Dictionary<byte, List<Producto>> productosConsumidosPorMesa, List<Producto> productos)
+        {
+            Console.WriteLine("Seleccione el número de mesa para agregar o eliminar productos:");
+            byte mesa;
+            while (!byte.TryParse(Console.ReadLine(), out mesa) || mesa < 1 || mesa > 20)
+            {
+                Console.WriteLine("Por favor, ingrese un número de mesa válido (entre 1 y 20).");
+                Console.Write("Seleccione el número de mesa para agregar o eliminar productos: ");
+            }
+            
+
+            // Verificar si la mesa ya tiene una lista de productos consumidos, si no, crear una nueva lista
+            if (!productosConsumidosPorMesa.ContainsKey(mesa))
+            {
+                productosConsumidosPorMesa[mesa] = new List<Producto>();
+            }
+
+            while (true)
+            {
+                Console.WriteLine("Seleccione una opción:");
+                Console.WriteLine("1. Agregar producto");
+                Console.WriteLine("2. Eliminar producto");
+                Console.WriteLine("0. Volver al menú principal");
+                string opcion = Console.ReadLine();
+
+                switch (opcion)
+                {
+                    case "1":
+                        MostrarProductos(productos);
+                        AgregarProductoPorID(productosConsumidosPorMesa[mesa], productos);
+                        break;
+                    case "2":
+                        MostrarProductos(productosConsumidosPorMesa[mesa]);
+                        EliminarProductoPorID(productosConsumidosPorMesa[mesa]);
+                        break;
+                    case "0":
+                        return; // Salir de la función y volver al menú principal
+                    default:
+                        Console.WriteLine("Opción no válida.");
+                        break;
+                }
+            }
+        }
+
+
+        static void MostrarProductos(List<Producto> productos)
+        {
+            Console.WriteLine("Lista de productos:");
+            foreach (var producto in productos)
+            {
+                Console.WriteLine($"ID: {producto.Id} - Nombre: {producto.Nombre} - Precio: {producto.Precio}");
+            }
+        }
+
+        static void AgregarProductoPorID(List<Producto> productosMesa, List<Producto> productos)
+        {
+            Console.WriteLine("Ingrese el ID del producto que desea agregar:");
+            int idProducto;
+            while (!int.TryParse(Console.ReadLine(), out idProducto) || idProducto <= 0)
+            {
+                Console.WriteLine("Por favor, ingrese un ID válido (número entero positivo).");
+                Console.Write("Ingrese el ID del producto que desea agregar: ");
+            }
+
+            Producto productoAAgregar = productos.Find(p => p.Id == idProducto);
+            if (productoAAgregar != null)
+            {
+                productosMesa.Add(productoAAgregar);
+                Console.WriteLine($"Producto '{productoAAgregar.Nombre}' agregado a la mesa.");
+            }
+            else
+            {
+                Console.WriteLine("No se encontró ningún producto con el ID especificado.");
+            }
+        }
+
+        static void EliminarProductoPorID(List<Producto> productosMesa)
+        {
+            Console.WriteLine("Ingrese el ID del producto que desea eliminar:");
+            int idProducto;
+            while (!int.TryParse(Console.ReadLine(), out idProducto) || idProducto <= 0)
+            {
+                Console.WriteLine("Por favor, ingrese un ID válido (número entero positivo).");
+                Console.Write("Ingrese el ID del producto que desea eliminar: ");
+            }
+
+            Producto productoAEliminar = productosMesa.Find(p => p.Id == idProducto);
+            if (productoAEliminar != null)
+            {
+                productosMesa.Remove(productoAEliminar);
+                Console.WriteLine($"Producto '{productoAEliminar.Nombre}' eliminado de la mesa.");
+            }
+            else
+            {
+                Console.WriteLine("No se encontró ningún producto con el ID especificado.");
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     }

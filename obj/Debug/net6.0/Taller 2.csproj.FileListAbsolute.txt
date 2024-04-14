@@ -1,0 +1,15 @@
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\bin\Debug\net6.0\Taller 2.exe
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\bin\Debug\net6.0\Taller 2.deps.json
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\bin\Debug\net6.0\Taller 2.runtimeconfig.json
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\bin\Debug\net6.0\Taller 2.dll
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\bin\Debug\net6.0\Taller 2.pdb
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\obj\Debug\net6.0\Taller 2.csproj.AssemblyReference.cache
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\obj\Debug\net6.0\Taller 2.GeneratedMSBuildEditorConfig.editorconfig
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\obj\Debug\net6.0\Taller 2.AssemblyInfoInputs.cache
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\obj\Debug\net6.0\Taller 2.AssemblyInfo.cs
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\obj\Debug\net6.0\Taller 2.csproj.CoreCompileInputs.cache
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\obj\Debug\net6.0\Taller 2.dll
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\obj\Debug\net6.0\refint\Taller 2.dll
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\obj\Debug\net6.0\Taller 2.pdb
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\obj\Debug\net6.0\Taller 2.genruntimeconfig.cache
+D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main\Taller2_JuanMarin_DanielMonsalve-main\obj\Debug\net6.0\ref\Taller 2.dll
