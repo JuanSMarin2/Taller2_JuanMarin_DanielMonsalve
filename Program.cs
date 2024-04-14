@@ -103,7 +103,7 @@
         }
 
 
-
+      
         static void AgregarProductos(List<Producto> productos)
         {
             Console.WriteLine("Ingrese los productos:");
@@ -210,7 +210,7 @@
         }
 
 
-
+        //Esta es la función encargada de agregar los productos a cada mesa para después poder generar la factura correctamente
         static void AgregarProductosAMesa(Dictionary<byte, List<Producto>> productosConsumidosPorMesa, List<Producto> productos)
         {
             Console.WriteLine("Seleccione el número de mesa para agregar o eliminar productos:");
