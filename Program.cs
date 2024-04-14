@@ -27,10 +27,10 @@
                 Console.WriteLine("  +---------------------------------------------------------------------------+");
                 string opcion = Console.ReadLine();
 
-                switch (opcion)
+                switch (opcion) //Aquí hacemos los casos posibles para la selección del menú
                 {
                     case "0": Environment.Exit(0); ; break;
-                    case "1":
+                    case "1": //caso 1 que es el encargado de generar la factura y exportarla
                         Console.Write("Ingrese el número de mesa para generar la factura: ");           
                         while (!byte.TryParse(Console.ReadLine(), out numeroMesa) || numeroMesa < 1 || numeroMesa > 20)
                         {
@@ -40,13 +40,13 @@
                         Factura factura = new Factura(productosConsumidosPorMesa);
                         factura.GenerarFactura(numeroMesa);               
                         break;
-                    case "2":
+                    case "2": //Este es el caso que se encarga de ejecutar la función que agregar o elimina los productos que cada mesa consume
 
                         AgregarProductosAMesa(productosConsumidosPorMesa, productos);
 
                         break;
 
-                    case "3":
+                    case "3": //Este caso muestra todas las posibles opciones para modificar la carta del restaurante así como agregar o eliminar nuevos productos, y ver la carta del restaurante
                         for (byte j = 0; j < 1;)
                         {
                             Console.WriteLine("Seleccione una opción: ");
@@ -80,6 +80,7 @@
                 Console.WriteLine();
             }
 
+            //El codigo encargado de validar que si exista la mesa
             for (byte i = 0; i < 1;)
             {
                 Console.WriteLine("Seleccione una mesa entre 1 y 20 ");
@@ -93,7 +94,7 @@
                 else { i++; }
 
             }
-            //Continuar
+  
         
 
 
@@ -102,7 +103,7 @@
         }
 
 
-
+      
         static void AgregarProductos(List<Producto> productos)
         {
             Console.WriteLine("Ingrese los productos:");
@@ -209,7 +210,7 @@
         }
 
 
-
+        //Esta es la función encargada de agregar los productos a cada mesa para después poder generar la factura correctamente
         static void AgregarProductosAMesa(Dictionary<byte, List<Producto>> productosConsumidosPorMesa, List<Producto> productos)
         {
             Console.WriteLine("Seleccione el número de mesa para agregar o eliminar productos:");
@@ -221,7 +222,7 @@
             }
             
 
-            // Verificar si la mesa ya tiene una lista de productos consumidos, si no, crear una nueva lista
+            // Verificar si la mesa ya tiene una lista de productos consumidos, si no, crea una nueva lista
             if (!productosConsumidosPorMesa.ContainsKey(mesa))
             {
                 productosConsumidosPorMesa[mesa] = new List<Producto>();
@@ -234,7 +235,7 @@
                 Console.WriteLine("2. Eliminar producto");
                 Console.WriteLine("0. Volver al menú principal");
                 string opcion = Console.ReadLine();
-
+                // Aquí son los casos para el apartado de agregar productos a la mesa, cada producto que la mesa ha consumido
                 switch (opcion)
                 {
                     case "1":
@@ -248,7 +249,7 @@
                     case "0":
                         return; // Salir de la función y volver al menú principal
                     default:
-                        Console.WriteLine("Opción no válida.");
+                        Console.WriteLine("Opción no válida."); //En caso tal de quel usuario envie un número incorrecto
                         break;
                 }
             }

@@ -10,7 +10,9 @@ namespace Taller_2
     {
         private string nombre;
         private int id;
-        private float precio;
+        private float precio; 
+        //Cada producto se va identificar por un ID
+        
 
 
         public string Nombre { get => nombre; set => nombre = value; }

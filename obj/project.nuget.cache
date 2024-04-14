@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "H1V/oV3aV83BFpz7v246N3nu0TPlfrvePf7HxQRosezqfhLXpOyxwxXrEZLvdPOQmIXFzQjylEYfxlKy84iaHA==",
   "success": true,
   "projectFilePath": "C:\\Users\\ASUS\\Documents\\Taller2\\Taller 2.csproj",
+=======
+  "dgSpecHash": "o2bkiiCQd2eHBqzw+Fm6pIrCY1hI1yWoboWF+KolMHPlTINfzDZyXWdyR3s7ywsVHCLc9DhPXcgC6ZiCpaPecA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Daniel\\Taller2_JuanMarin_DanielMonsalve\\Taller 2.csproj",
+>>>>>>> 1e6817ff3d49a514b61d4a0dac9e54f1e766f7c3
   "expectedPackageFiles": [],
   "logs": []
 }

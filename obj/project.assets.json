@@ -13,11 +13,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\ASUS\\Documents\\Taller2\\Taller 2.csproj",
       "projectName": "Taller 2",
       "projectPath": "C:\\Users\\ASUS\\Documents\\Taller2\\Taller 2.csproj",
       "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\ASUS\\Documents\\Taller2\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\Daniel\\Taller2_JuanMarin_DanielMonsalve\\Taller 2.csproj",
+      "projectName": "Taller 2",
+      "projectPath": "C:\\Users\\Daniel\\Taller2_JuanMarin_DanielMonsalve\\Taller 2.csproj",
+      "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Daniel\\Taller2_JuanMarin_DanielMonsalve\\obj\\",
+>>>>>>> 1e6817ff3d49a514b61d4a0dac9e54f1e766f7c3
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",

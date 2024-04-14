@@ -25,7 +25,7 @@ namespace Taller_2
 
             List<Producto> productosConsumidos = _productosConsumidosPorMesa[numeroMesa];
 
-
+            //ASCII 
             Console.WriteLine(@" _____ _    ____ _____ _   _ ____     _     
 |  ___/ \  / ___|_   _| | | |  _ \   / \    
 | |_ / _ \| |     | | | | | | |_) | / _ \   
@@ -36,7 +36,7 @@ namespace Taller_2
             Console.WriteLine($"Fecha: {DateTime.Now.ToShortDateString()}");
             Console.WriteLine($"Hora: {DateTime.Now.ToShortTimeString()}");
             Console.WriteLine($"----------------------------------");
-            Console.WriteLine($"Número de mesa: {numeroMesa}");
+            Console.WriteLine($"Número de mesa: {numeroMesa}"); //El número que identifica cada mesa para generar su respectiva factura
             Console.WriteLine($"----------------------------------");
             Console.WriteLine("Productos consumidos:");
 
@@ -59,22 +59,22 @@ namespace Taller_2
 
         }
 
-        private float CalcularTotalProductos(List<Producto> productos)
+        private float CalcularTotalProductos(List<Producto> productos) //Esta función toma el precio de cada producto y lo suma
         {
             return productos.Sum(producto => producto.Precio);
         }
 
-        private float CalcularIVA(List<Producto> productos)
+        private float CalcularIVA(List<Producto> productos) //Calculamos el iba del total de los productos
         {
             float totalProductos = CalcularTotalProductos(productos);
             return totalProductos * 0.19f; // IVA del 19%
         }
 
 
-        private void ExportarFacturaATXT(byte numeroMesa, List<Producto> productos)
+        private void ExportarFacturaATXT(byte numeroMesa, List<Producto> productos) //La función para Exportar la factura de consola a un archivo .txt
         {
-            string path = @"D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main";
-            string fileName = $"Factura_Mesa_{numeroMesa}.txt";
+            string path = @"D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main"; //Esta es la ruta donde queremos que se guarde el archivo .txt
+            string fileName = $"Factura_Mesa_{numeroMesa}.txt"; //Para guardar la factura ordenadamente
             string fullPath = Path.Combine(path, fileName);
 
             using (StreamWriter sw = File.CreateText(fullPath))
@@ -86,7 +86,7 @@ namespace Taller_2
                 sw.WriteLine("----------------------------------");
                 sw.WriteLine($"Número de mesa: {numeroMesa}");
                 sw.WriteLine("----------------------------------");
-                sw.WriteLine("Productos consumidos:");
+                sw.WriteLine("Productos consumidos: ");
 
                 foreach (var producto in productos)
                 {
@@ -96,14 +96,14 @@ namespace Taller_2
                 sw.WriteLine($"Total Productos Consumidos: {CalcularTotalProductos(productos):C}");
                 sw.WriteLine($"IVA: {CalcularIVA(productos):C}");
                 sw.WriteLine("----------------------------------");
-                sw.WriteLine($"Total a Pagar: {CalcularIVA(productos) + CalcularTotalProductos(productos):C}");
+                sw.WriteLine($"Total a Pagar: {CalcularIVA(productos) + CalcularTotalProductos(productos):C}"); //Suma total del IVA, más el total de los productos
                 sw.WriteLine("----------------------------------");
             }
 
-            Console.WriteLine("La factura ha sido generada y exportada exitosamente");
+            Console.WriteLine("La factura ha sido generada y exportada exitosamente.");
         }
 
-        // Otras funciones relacionadas con la factura...
+        
 
     }
 }
