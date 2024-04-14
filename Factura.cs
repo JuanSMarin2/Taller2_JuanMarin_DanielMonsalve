@@ -22,7 +22,7 @@ namespace Taller_2
                 Console.WriteLine($"No hay productos consumidos en la mesa {numeroMesa}.");
                 return;
             }
-
+             
             List<Producto> productosConsumidos = _productosConsumidosPorMesa[numeroMesa];
              
             //ASCII 
