@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ASUS\\Documents\\.Juan\\3 Semestre\\Programación\\Taller 2\\Taller 2.csproj": {}
+    "C:\\Users\\ASUS\\Documents\\Taller2\\Taller 2.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ASUS\\Documents\\.Juan\\3 Semestre\\Programación\\Taller 2\\Taller 2.csproj": {
+    "C:\\Users\\ASUS\\Documents\\Taller2\\Taller 2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\.Juan\\3 Semestre\\Programación\\Taller 2\\Taller 2.csproj",
+        "projectUniqueName": "C:\\Users\\ASUS\\Documents\\Taller2\\Taller 2.csproj",
         "projectName": "Taller 2",
-        "projectPath": "C:\\Users\\ASUS\\Documents\\.Juan\\3 Semestre\\Programación\\Taller 2\\Taller 2.csproj",
+        "projectPath": "C:\\Users\\ASUS\\Documents\\Taller2\\Taller 2.csproj",
         "packagesPath": "C:\\Users\\ASUS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ASUS\\Documents\\.Juan\\3 Semestre\\Programación\\Taller 2\\obj\\",
+        "outputPath": "C:\\Users\\ASUS\\Documents\\Taller2\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ASUS\\AppData\\Roaming\\NuGet\\NuGet.Config",
