@@ -35,6 +35,7 @@ namespace Taller_2
 |_|/_/   \_\____| |_|  \___/|_| \_/_/   \_\ ");
             Console.WriteLine($"----------------------------------");
 
+
             Console.WriteLine($"Fecha: {DateTime.Now.ToShortDateString()}");
             Console.WriteLine($"Hora: {DateTime.Now.ToShortTimeString()}");
             Console.WriteLine($"----------------------------------");
