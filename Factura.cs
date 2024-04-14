@@ -64,7 +64,7 @@ namespace Taller_2
             return productos.Sum(producto => producto.Precio);
         }
 
-        private float CalcularIVA(List<Producto> productos)
+        private float CalcularIVA(List<Producto> productos) //Calculamos el iba del total de los productos
         {
             float totalProductos = CalcularTotalProductos(productos);
             return totalProductos * 0.19f; // IVA del 19%
