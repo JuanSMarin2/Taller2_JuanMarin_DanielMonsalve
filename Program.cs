@@ -23,6 +23,7 @@
                 Console.WriteLine("1. Generar Factura ");
                 Console.WriteLine("2. Agregar productos a mesa");
                 Console.WriteLine("3. Editar Carta/Productos");
+                Console.WriteLine("4. Buscar Factura ");
                 Console.WriteLine("0. Salir");
                 Console.WriteLine("  +---------------------------------------------------------------------------+");
                 string opcion = Console.ReadLine();
@@ -37,8 +38,8 @@
                             Console.WriteLine("Por favor, ingrese un número de mesa válido (entre 1 y 20).");
                             Console.Write("Ingrese el número de mesa para generar la factura: ");
                         }
-                        Factura factura = new Factura(productosConsumidosPorMesa);
-                        factura.GenerarFactura(numeroMesa);               
+                        Factura Factura = new Factura(productosConsumidosPorMesa);
+                        Factura.GenerarFactura(numeroMesa);               
                         break;
                     case "2": //Este es el caso que se encarga de ejecutar la función que agregar o elimina los productos que cada mesa consume
 
@@ -74,6 +75,19 @@
                             }
                         }
                         break;
+                    case "4":
+                        Console.Write("Ingrese el número de mesa para buscar la factura: ");
+                        while (!byte.TryParse(Console.ReadLine(), out numeroMesa) || numeroMesa < 1 || numeroMesa > 20)
+                        {
+                            Console.WriteLine("Por favor, ingrese un número de mesa válido (entre 1 y 20).");
+                            Console.Write("Ingrese el número de mesa para buscar la factura: ");
+                        }
+                        Factura factura = new Factura(productosConsumidosPorMesa);
+                        factura.ImportarFactura(numeroMesa);
+
+                        //Este caso es para buscar la factura
+                        break;
+
 
                     default: Console.WriteLine("Seleccione una opción valida"); break;
                 }

@@ -106,7 +106,35 @@ namespace Taller_2
             Console.WriteLine("La factura ha sido generada y exportada exitosamente.");
         }
 
-        
+
+        public void ImportarFactura(byte numeroMesa)
+        {
+            string path = @"D:\Universidad\POO\Taller2_JuanMarin_DanielMonsalve-main";
+            string fileName = $"Factura_Mesa_{numeroMesa}.txt";
+            string fullPath = Path.Combine(path, fileName);
+
+            if (!File.Exists(fullPath))
+            {
+                Console.WriteLine($"No se encontró la factura para la mesa {numeroMesa}.");
+                return;
+            }
+
+            Console.WriteLine($"Importando factura para la mesa {numeroMesa}...");
+
+            using (StreamReader sr = File.OpenText(fullPath))
+            {
+                string line;
+                while ((line = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(line); // Imprimir cada línea de la factura
+                }
+            }
+        }
+
+
+
+
+
 
     }
 }
